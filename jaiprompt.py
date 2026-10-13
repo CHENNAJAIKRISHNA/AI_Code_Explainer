@@ -2,7 +2,7 @@ import streamlit as st
 from groq import Groq
 
 # Enter your Groq API Key
-client = Groq(api_key="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")
+client = Groq(api_key="Enter your API key")
 
 st.set_page_config(page_title="AI Code Explainer", page_icon="🤖")
 
@@ -57,7 +57,7 @@ Keep the explanation beginner-friendly.
         try:
 
             response = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 messages=[
                     {"role": "user", "content": prompt}
                 ]
